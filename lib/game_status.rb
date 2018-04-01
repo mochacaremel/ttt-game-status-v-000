@@ -181,9 +181,9 @@ end
 
 
 
-
-display_board(board)
-play(board)
+#
+# display_board(board)
+# play(board)
 
 # WIN_COMBINATIONS = [
 #   [0, 1, 2],
