@@ -28,13 +28,19 @@ else
   false
 end
 
-
 def full?(board)
-  board.all? do |box|
-    if box == "X" || box == "Y"
-      return true
-    end
-  end
+  if board.include?(' ') || board.include?('')
+    return false
 else
-  return false
+    return true
+  end
 end
+# def full?(board)
+#   board.all? do |box|
+#     if box == "X" || box == "Y"
+#       return true
+#     end
+#   end
+# else
+#   return false
+# end
