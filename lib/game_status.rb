@@ -43,7 +43,7 @@ class TicTacToe
     end
     # check_draw?
     def check_draw
-        # If Board says we've filled up 
+        # If Board says we've filled up
         if @board.full?
             # display draw message
             puts "Bummer, you've drawn..."
@@ -169,10 +169,10 @@ class Board
     # winning_combination?
     def winning_combination?(piece)
         # is there a winning_diagonal?
-        # or winning_vertical? 
+        # or winning_vertical?
         # or winning_horizontal? for that piece?
-        winning_diagonal?(piece)   || 
-        winning_horizontal?(piece) || 
+        winning_diagonal?(piece)   ||
+        winning_horizontal?(piece) ||
         winning_vertical?(piece)
     end
     # winning_diagonal?
