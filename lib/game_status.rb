@@ -2,7 +2,7 @@ class TicTacToe
     # initialize
     def initialize
         # set up the board
-        <@UNVERIFIED|@board> = Board.new
+        @UNVERIFIED|@board> = Board.new
         # set up the players
         @player_x = Player.new("Madame X", :x, <@UNVERIFIED|@board>)
         @player_y = Player.new("Mister Y", :y, <@UNVERIFIED|@board>)
