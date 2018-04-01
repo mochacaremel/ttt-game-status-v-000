@@ -100,19 +100,19 @@ end
 
 
 #HAS ANYONE WON? return false if no. return win_combo if yes
-def won?(board)
-  WIN_COMBINATIONS.each do |win_combo|
-    #check for player 1 win
-    if check_win_combination?(board, 'X', win_combo)
-      return win_combo
-      #check for player 2 win
-    elsif check_win_combination?(board, 'O', win_combo)
-      return win_combo
-    else
-      return false
-    end
-  end
-end
+# def won?(board)
+#   WIN_COMBINATIONS.each do |win_combo|
+#     #check for player 1 win
+#     if check_win_combination?(board, 'X', win_combo)
+#       return win_combo
+#       #check for player 2 win
+#     elsif check_win_combination?(board, 'O', win_combo)
+#       return win_combo
+#     else
+#       return false
+#     end
+#   end
+# end
 
 #CHECK WINNING COMBOS
 def check_win_combination?(board, player, win_combo)
@@ -196,25 +196,25 @@ end
 #   [2, 5, 8]
 # ]
 #
-# def won?(board)
-#   WIN_COMBINATIONS.each do |win_combination|
-#     win_index_1 = win_combination[0]
-#     win_index_2 = win_combination[1]
-#     win_index_3 = win_combination[2]
-#
-#     position_1 = board[win_index_1]
-#     position_2 = board[win_index_2]
-#     position_3 = board[win_index_3]
-#
-#     if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 =="O" && position_2 == "O" && position_3 == "O"
-#       return win_combination
-#     end
-#
-#   end
-# else
-#   false
-# end
-#
+def won?(board)
+  WIN_COMBINATIONS.each do |win_combination|
+    win_index_1 = win_combination[0]
+    win_index_2 = win_combination[1]
+    win_index_3 = win_combination[2]
+
+    position_1 = board[win_index_1]
+    position_2 = board[win_index_2]
+    position_3 = board[win_index_3]
+
+    if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 =="O" && position_2 == "O" && position_3 == "O"
+      return win_combination
+    end
+
+  end
+else
+  false
+end
+
 # def full?(board)
 #   if board.include?(' ') || board.include?('')
 #     return false
